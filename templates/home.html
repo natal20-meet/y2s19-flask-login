@@ -4,7 +4,11 @@ Login form WITH session!
 
 {%if session['logged_in']%}
 Hi {{session['name']}}, you are logged in.
+your favorite food is {{fav_food}} 
+{%else%}
+you are logged out 
 {%endif%}
+
 
 <form action="/login" method="POST">
   <input type="username" name="username" placeholder="Username">
